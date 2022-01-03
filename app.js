@@ -38,7 +38,7 @@ app.post("/lillefar-com", function (req, res) {
   /* exec('npm -C ~/sites/test.lillefar.com install --production', execCallback); */
 
   // and run tsc
-  exec("tsc", execCallback);
+  /* exec("tsc", execCallback); */
 });
 
 app.listen(3030, function () {
