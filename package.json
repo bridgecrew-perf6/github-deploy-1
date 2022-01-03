@@ -1,0 +1,17 @@
+{
+  "name": "github-deploy",
+  "version": "1.0.0",
+  "description": "A node app to listen and act upon git push",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "compression": "^1.7.4",
+    "express": "^4.17.2",
+    "q": "^1.5.1"
+  }
+}
