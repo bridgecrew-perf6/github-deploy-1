@@ -11,12 +11,12 @@ app.get("/", function (req, res) {
   console.log("get /");
 });
 
-app.get("/payload", function (req, res) {
+app.get("/lillefar-com", function (req, res) {
   res.sendStatus(200);
-  console.log("get /payload");
+  console.log("get /lillefar-com");
 });
 
-app.post("/payload", function (req, res) {
+app.post("/lillefar-com", function (req, res) {
   //verify that the payload is a push from the correct repo
   //verify repository.name == 'wackcoon-device' or repository.full_name = 'DanielEgan/wackcoon-device'
   console.log(
@@ -26,19 +26,19 @@ app.post("/payload", function (req, res) {
   console.log("pulling code from GitHub...");
 
   // reset any changes that have been made locally
-  /* exec('git -C ~/projects/wackcoon-device reset --hard', execCallback);
+  exec("git -C ~/sites/lillefar.com reset --hard", execCallback);
 
-	// and ditch any files that have been added locally too
-	exec('git -C ~/projects/wackcoon-device clean -df', execCallback);
+  // and ditch any files that have been added locally too
+  exec("git -C ~/sites/lillefar.com clean -df", execCallback);
 
-	// now pull down the latest
-	exec('git -C ~/projects/wackcoon-device pull -f', execCallback);
+  // now pull down the latest
+  exec("git -C ~/sites/lillefar.com pull -f", execCallback);
 
-	// and npm install with --production
-	exec('npm -C ~/projects/wackcoon-device install --production', execCallback); */
+  // and npm install with --production
+  /* exec('npm -C ~/sites/test.lillefar.com install --production', execCallback); */
 
   // and run tsc
-  /* exec('tsc', execCallback); */
+  exec("tsc", execCallback);
 });
 
 app.listen(3030, function () {
